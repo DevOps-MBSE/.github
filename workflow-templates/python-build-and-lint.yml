@@ -33,7 +33,7 @@ jobs:
       - name: Upload Python Wheel
         uses: actions/upload-artifact@v3
         with:
-          name: aac_wheel
+          name: [PLACEHOLDER]_wheel
           path: python/dist/
 
       - name: Build Documentation
@@ -45,7 +45,7 @@ jobs:
       - name: Upload Documentation
         uses: actions/upload-artifact@v3
         with:
-          name: aac-documentation
+          name: [PLACEHOLDER]-documentation
           path: |
             python/docs/doc_artifacts/api
             python/docs/doc_artifacts/project_documentation
