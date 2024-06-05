@@ -1,6 +1,6 @@
 name: "🐛 Bug Report"
 description: Create a new ticket for a bug.
-title: "🐛 [BUG] - <title>"
+title: "🐛 [BUG] - <title> test"
 labels: [
   "bug"
 ]
@@ -44,9 +44,9 @@ body:
     attributes:
       label: "Reproduction steps"
       value: |
-        Please enter an explicit description of your issue
-        1. Go to '...'
-        2. Click on '....'
+        Please enter an explicit description of your issue. test 
+        1. Go to '...' test
+        2. Click on '....' test
         3. Scroll down to '....'
         4. See error
       render: bash
