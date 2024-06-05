@@ -23,7 +23,7 @@ jobs:
       with:
         python-version: ${{ matrix.py_version }}
 
-    - name: Install the AaC Package
+    - name: Install ${{ github.event.repository.name }} Package
       run: pip install -e .[all]
 
     - name: Run Tox Tests

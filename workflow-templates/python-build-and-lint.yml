@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install the AaC Package
+      - name: Install ${{ github.event.repository.name }} Package
         run: pip install [PLACEHOLDER] -e .[all]
 
       - name: Lint with flake8

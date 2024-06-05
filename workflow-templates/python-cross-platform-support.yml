@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Install the AaC Package
+      - name: Install ${{ github.event.repository.name }} Package
         run: python -m pip install -e .[all]
 
       - name: Create Dependencies Package
