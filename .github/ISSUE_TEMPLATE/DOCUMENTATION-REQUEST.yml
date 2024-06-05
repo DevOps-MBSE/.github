@@ -5,7 +5,7 @@ labels: [
   "documentation"
 ]
 projects: [
-  "DevOps-MBSE"
+  "DevOps-MBSE/1"
 ]
 body:
   - type: checkboxes

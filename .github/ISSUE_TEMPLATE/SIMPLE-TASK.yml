@@ -5,7 +5,7 @@ labels: [
   "enhancement"
 ]
 projects: [
-  "DevOps-MBSE"
+  "DevOps-MBSE/1"
 ]
 body:
   - type: input
