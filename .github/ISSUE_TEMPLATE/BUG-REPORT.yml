@@ -5,7 +5,7 @@ labels: [
   "bug"
 ]
 projects: [
-  "DevOps-MBSE/AaC"
+  "DevOps-MBSE"
 ]
 body:
   - type: checkboxes
