@@ -19,7 +19,7 @@ jobs:
           python-version: 3.11
 
       - name: Install the AaC Package
-        run: pip install aac -e .[all]
+        run: pip install [PLACEHOLDER] -e .[all]
 
       - name: Lint with flake8
         run: flake8 .
