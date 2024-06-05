@@ -3,7 +3,7 @@ name: Main branch Workflow
 
 on:
   push:
-    branches: [main]
+    branches: [$default-branch]
 
 jobs:
   build_python_artifacts:
