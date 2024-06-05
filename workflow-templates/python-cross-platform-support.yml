@@ -89,7 +89,7 @@ jobs:
           .\install_aac_air_gap.bat
 
       - name: Test Plugin Commands
-      - run: echo "Replace with testing the package commands of this repo"
+        run: echo "Replace with testing the package commands of this repo"
 
       - name: Upload logs from failed runs
         if: ${{ failure() }}
