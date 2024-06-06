@@ -19,7 +19,7 @@ jobs:
           python-version: 3.11
 
       - name: Install ${{ github.event.repository.name }} Package
-        run: pip install [PLACEHOLDER] -e .[all]
+        run: pip install ${{ github.event.repository.name }} -e .[all]
 
       - name: Lint with flake8
         run: flake8 .
@@ -33,7 +33,7 @@ jobs:
       - name: Upload Python Wheel
         uses: actions/upload-artifact@v3
         with:
-          name: [PLACEHOLDER]_wheel
+          name: ${{ github.event.repository.name }}_wheel
           path: python/dist/
 
       - name: Build Documentation
@@ -45,7 +45,7 @@ jobs:
       - name: Upload Documentation
         uses: actions/upload-artifact@v3
         with:
-          name: [PLACEHOLDER]-documentation
+          name: ${{ github.event.repository.name }}-documentation
           path: |
             python/docs/doc_artifacts/api
             python/docs/doc_artifacts/project_documentation
