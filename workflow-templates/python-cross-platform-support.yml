@@ -36,11 +36,17 @@ jobs:
         if: matrix.os == 'windows-latest'
         run: |
           ./secure_install/pipeline_scripts/create_install_archive.bat
+      
+      - name: Get ${{ github.event.repository.name }} Package Version
+        id: package-version
+        run: |
+          VERSION=$(pip show ${{ github.event.repository.name }} | grep Version | cut -f 2 -d " ")
+          echo VERSION_STRING=$VERSION >> $GITHUB_OUTPUT
 
       - name: Upload Dependencies Package
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: secure_install_${{ matrix.os }}
+          name: secure_install_${{ matrix.os }}_${{steps.package-version.outputs.VERSION_STRING}}
           path: python/secure_install/aac_secure_install_*
 
 
@@ -91,9 +97,15 @@ jobs:
       - name: Test Plugin Commands
         run: echo "Replace with testing the package commands of this repo"
 
+      - name: Get ${{ github.event.repository.name }} Package Version
+        id: package-version
+        run: |
+          VERSION=$(pip show ${{ github.event.repository.name }} | grep Version | cut -f 2 -d " ")
+          echo VERSION_STRING=$VERSION >> $GITHUB_OUTPUT
+
       - name: Upload logs from failed runs
         if: ${{ failure() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: failed_test_log
+          name: failed_test_log_${{steps.package-version.outputs.VERSION_STRING}}
           path: ${{ env.pythonLocation }}/**/aac.log
