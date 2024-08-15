@@ -22,10 +22,16 @@ jobs:
     runs-on: ubuntu-22.04
     needs: build_deployment_artifacts
     steps:
+      - name: Get ${{ github.event.repository.name }} Package Version
+        id: package-version
+        run: |
+          VERSION=$(pip show ${{ github.event.repository.name }} | grep Version | cut -f 2 -d " ")
+          echo VERSION_STRING=$VERSION >> $GITHUB_OUTPUT
+          
       - name: Download Python Wheel
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: ${{ github.event.repository.name }}_wheel
+          name: ${{ github.event.repository.name }}_${{steps.package-version.outputs.VERSION_STRING}}_wheel
           path: python/dist/
 
       - name: Publish distribution to PyPI
