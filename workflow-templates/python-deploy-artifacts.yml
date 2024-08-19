@@ -35,7 +35,7 @@ jobs:
           path: python/dist/
 
       - name: Publish distribution to PyPI
-        uses: pypa/gh-action-pypi-publish@master
+        uses: pypa/gh-action-pypi-publish@release/${{steps.package-version.outputs.VERSION_STRING}}
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
           packages_dir: python/dist/
