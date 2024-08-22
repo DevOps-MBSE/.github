@@ -10,6 +10,13 @@ updates:
       - "bunchw"
     labels:
       - "dependencies"
+    groups:
+      actions:
+        applies-to: version-updates
+        dependency-type: development
+        patterns:
+          - "*"
+
   
   - package-ecosystem: "pip"
     directory: "/" # Location of package manifests
@@ -18,6 +25,26 @@ updates:
     reviewers:
       - "lizzcondrey"
       - "bunchw"
-
     labels:
       - "dependencies"
+    groups:
+      runtime_dependencies:
+        applies-to: version-updates
+        dependency-type: production
+        patterns:
+          - "runtime_dependencies"
+      development_dependencies:
+        applies-to: version-updates
+        dependency-type: development
+        patterns:
+          - "development_dependencies"
+      documentation_dependencies:
+        applies-to: version-updates
+        dependency-type: production
+        patterns:
+          - "documentation_dependencies"     
+      test_dependencies:
+        applies-to: version-updates
+        dependency-type: development
+        patterns:
+          - "test_dependencies"
