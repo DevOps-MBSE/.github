@@ -6,7 +6,8 @@ updates:
     schedule:
       interval: "weekly"
     reviewers:
-      - "DevOps-MBSE/aac-program-team"
+      - "lizzcondrey"
+      - "bunchw"
     labels:
       - "dependencies"
   
@@ -15,6 +16,8 @@ updates:
     schedule:
       interval: "weekly"
     reviewers:
-      - "DevOps-MBSE/aac-program-team"
+      - "lizzcondrey"
+      - "bunchw"
+
     labels:
       - "dependencies"
