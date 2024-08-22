@@ -7,6 +7,8 @@ updates:
       interval: "weekly"
     reviewers:
       - "DevOps-MBSE/aac-program-team"
+    labels:
+      - "dependencies"
   
   - package-ecosystem: "pip"
     directory: "/" # Location of package manifests
@@ -14,3 +16,5 @@ updates:
       interval: "weekly"
     reviewers:
       - "DevOps-MBSE/aac-program-team"
+    labels:
+      - "dependencies"
