@@ -1,0 +1,16 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "DevOps-MBSE/aac-program-team"
+  
+  - package-ecosystem: "pip"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "DevOps-MBSE/aac-program-team"
