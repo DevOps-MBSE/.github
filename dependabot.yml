@@ -1,0 +1,47 @@
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "lizzcondrey"
+      - "bunchw"
+    labels:
+      - "dependencies"
+    groups:
+      actions:
+        applies-to: version-updates
+        dependency-type: development
+        patterns:
+          - "*"
+      security:
+        applies-to: version-updates
+        dependency-type: development
+        patterns:
+          - "*"
+
+  
+  - package-ecosystem: "pip"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "lizzcondrey"
+      - "bunchw"
+    labels:
+      - "dependencies"
+    groups:
+      production-dependencies:
+        applies-to: version-updates
+        dependency-type: production
+      development-dependencies:
+        applies-to: version-updates
+        dependency-type: development
+      prod-security-updates: 
+        applies-to: security-updates
+        dependency-type: production
+      dev-security-updates: 
+        applies-to: security-updates
+        dependency-type: development
