@@ -24,7 +24,7 @@ jobs:
           python-version: 3.11
 
       - name: Install ${{ github.event.repository.name }} Package
-        run: python -m pip install -e .[all]
+        run: pip install -e .[all]
 
       - name: Create Dependencies Package
         id: os_id
