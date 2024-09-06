@@ -9,7 +9,7 @@ on:
 # Configuring starting working directory
 defaults:
   run:
-    working-directory: ./python
+    working-directory: .
 
 # Set token permissions
 permissions:
@@ -33,6 +33,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
