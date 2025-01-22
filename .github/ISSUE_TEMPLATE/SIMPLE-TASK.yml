@@ -7,14 +7,8 @@ labels: [
 projects: [
   "DevOps-MBSE/1"
 ]
+type: "Task"
 body:
-  - type: input
-    id: parent_feature
-    attributes:
-      label: "Parent Feature"
-      placeholder: "#<Issue ID>"
-    validations:
-      required: true
   - type: textarea
     id: summary
     attributes:
@@ -37,5 +31,12 @@ body:
     attributes:
       label: "Unresolved questions"
       placeholder: Identify any unresolved issues.
+    validations:
+      required: false
+  - type: textarea
+    id: resources
+    attributes:
+      label: "Additional Resources"
+      placeholder: Provide any additional useful information, guides, or resources for supporting this effort.
     validations:
       required: false
