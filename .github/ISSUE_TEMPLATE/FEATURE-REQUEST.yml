@@ -8,14 +8,8 @@ labels: [
 projects: [
   "DevOps-MBSE/1"
 ]
+type: "Feature"
 body:
-  - type: textarea
-    id: reference_issues
-    attributes:
-      label: "Reference Issues"
-      placeholder: "#<Issue IDs>"
-    validations:
-      required: false
   - type: textarea
     id: summary
     attributes:
@@ -23,6 +17,13 @@ body:
       placeholder: Describe in a few lines your feature request.
     validations:
       required: true
+  - type: textarea
+    id: dod
+    attributes:
+      label: "Definition of Done"
+      placeholder: Provide a list of criteria by which to judge the effort as done.
+    validations:
+      required: false
   - type: textarea
     id: basic_example
     attributes:
@@ -42,5 +43,12 @@ body:
     attributes:
       label: "Unresolved questions"
       placeholder: Identify any unresolved issues.
+    validations:
+      required: false
+  - type: textarea
+    id: resources
+    attributes:
+      label: "Additional Resources"
+      placeholder: Provide any additional useful information, guides, or resources for supporting this effort.
     validations:
       required: false
